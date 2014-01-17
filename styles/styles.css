@@ -1,0 +1,335 @@
+/************************************************
+/* RESTE MEYER
+************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+body {
+    line-height: 1;
+    color: black;
+    background: white;
+}
+ol, ul {
+    list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: "";
+}
+blockquote, q {
+    quotes: "" "";
+}
+/************************************************
+/* FIN RESTE MEYER
+************************************************/
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif; 
+    line-height: 1.4em;
+}
+
+
+h1      { font-size: 2em;}
+h2      { font-size: 1.5em;}
+h3      { font-size: 1.17em;}
+h4      { font-size: 1em;}
+h5      { font-size: 0.83em;}
+h6      { font-size: 0.75em;}
+
+#wrapper {
+    position:relative;
+    height:100%;
+    background-color: transparent;
+}
+
+html {
+    height: 100%;
+    overflow:hidden;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+body{
+    background-color: transparent;
+    height:100%;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+#directions-panel{
+    padding: 0 0.5em;
+}
+
+.adp-placemark{
+    background-color: transparent;
+    padding:0.3em;
+}
+
+#bankDetails h2 img{
+    margin-right: 10px;
+}
+
+
+#bankDetails h2{
+    padding: 0.5em;
+    text-align: center;
+    background-color: white;
+}
+
+button{
+    margin-top: 0.3em;
+    background-color: #377590;
+    border: 1px solid #A3C4EB;
+    border-radius: none;
+    color: white;
+    font-size: 1.4em;
+    padding:0.3em;
+}
+
+button:hover{
+    background-color: rgba(55,117,144,0.8);
+    cursor:pointer;
+
+}
+
+#imgmap, #interactive {
+	text-align: center;
+}
+
+#barWrapper{
+    box-shadow: 0 0 6px;
+    position:absolute;
+    z-index: 100;
+    background-color: rgb(230,230,230);
+    overflow: hidden;
+    overflow-y:scroll;
+    transition: top 0.5s;
+    -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#interactive, #list{
+}
+
+
+
+#gmap{
+    top:0;
+    left:0;
+    position:absolute;
+    height: 100%;
+    width:100%;
+}
+
+
+h2{
+    text-align: center;
+    padding: 0.5em ;
+    border-top: 1px solid #006175;
+    border-right: 1px solid #006175;
+    border-bottom: 1px solid #006175;
+    background-color: white;
+}
+
+.bank{
+    border-bottom: 1px solid silver;
+}
+
+.bank h4{
+    padding:0.5em 0.5em 0.5em 2em;
+    display:inline-block;
+    position:relative;
+}
+
+.bank h4 img{
+    position:absolute;
+    left:0.5em;
+    top: 0.6em;
+}
+
+.bank p{
+    display:inline-block;
+    text-align: right;
+    padding: 0.5em;
+    border-left:1px solid silver;
+}
+
+.bank:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.index{
+    display: none;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: silver; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4); 
+}
+
+
+.displayBar{
+    box-shadow: 1px 1px 5px;    
+    z-index: 110;
+    top:10%;
+    position:absolute;
+    background-color: white;
+    border: 1px solid #006175;
+    transition: top 0.5s;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.bank:hover{
+    cursor:pointer;
+    background-color: white;
+}
+
+#show img, #hide img , #fresh img{
+    max-width: 100%;
+}
+
+span#show{
+    display:none;
+}
+
+#show, #hide{
+    border-bottom: 1px solid #006175;
+}
+
+#show, #hide, #fresh{
+    display:block;
+    padding:0.5em;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+#show:hover, #hide:hover, #fresh:hover{
+    cursor: pointer;
+    background-color: silver;
+}
+
+
+@media screen and (min-width: 150px){
+    .displayBar{
+        left: 5%;
+        width:10%;
+    }
+    #barWrapper{
+        width:80%;
+        height:90%;
+        bottom:0;
+        left:15%;
+    }
+
+    .bank h4{
+        float: left;
+    }
+
+    .bank p{
+        float: right;
+    }
+
+    #gmap{
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 575px){
+    .displayBar{
+        width:6%;
+        left:auto;
+        right:45%;
+    }
+
+    #barWrapper{
+        width:45%;
+        left:auto;
+        right:0;
+    }
+
+    .bank h4{
+        width:auto;
+    }
+
+    .bank p{
+        width:auto;
+    }
+
+}
+
+@media screen and (min-width: 1050px){
+    .displayBar{
+        width:4%;
+        left:auto;
+        right:25%;
+    }
+
+    #barWrapper{
+        width:25%;
+        left:auto;
+        right:0;
+    }
+    
+}
+
+@media screen and (min-width: 1232px){
+    
+}
+@media screen and (min-width: 1484px){
+    .container{
+        width:1482px;
+    }
+}

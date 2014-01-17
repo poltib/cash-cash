@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="fr_BE">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Flouz-Cash</title>
+
+		<link rel="stylesheet" href="styles/styles.css" />
+        <meta name="viewport" content="width=device-width">
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="displayBar">
+				<span id="show"><img src="styles/img/up.png" alt=""></span>
+				<span id="hide"><img src="styles/img/close.png" alt=""></span>
+				<span id="fresh"><a href=""><img src="styles/img/loop.png" alt=""></a></span>
+			</div>
+			<div id="barWrapper">
+				<section id="interactive">
+					<div id="bankDetails">
+					</div>	
+					<button type="button" id="reload">Liste des banques</button>
+					<div id="directions-panel" ></div>
+				</section>
+
+				<section id="list">
+					<h2 class="banksNumber"></h2>
+					<div class="row-fluid">
+						<div class="span6">
+
+							<ul class="banks">
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div id="gmap"></div>
+			<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHJ3p-sn1Y5tJGrzH9MF5cbR5sdsDmhfg&sensor=false"></script>
+			<script src="js/jquery.js"></script>
+			<script src="js/script.js"></script>
+		</div>
+	</body>
+</html>

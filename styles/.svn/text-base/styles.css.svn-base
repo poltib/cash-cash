@@ -1,0 +1,33 @@
+/* ria.exos.flatland.be - Notes de cours en ligne pour le cours de RIA - Applications Internet Riches
+ * CSS Document - /html5/geolocation/styles/styles.css
+ * coded by Pierre-Antoine Delnatte
+ * october 2012
+ */
+
+@import url( "bootstrap.css" );
+
+html {
+	background: silver url( img/grey.png ) top left repeat;
+}
+
+body {
+	background: transparent;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 40px auto;
+}
+
+#imgmap, #interactive {
+	text-align: center;
+}
+
+#interactive h2 {
+	text-align: left;
+}
+
+#gmap {
+	background: #ccc;
+	height: 450px;
+}
